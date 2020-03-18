@@ -314,7 +314,7 @@ class FeatureManager {
             adapter.setStateChanged('info.device_fw', fw_ver, true);
 
             let fw = fw_ver.split('_'); // Splitting the FW into [Version, Build] array.
-            if (parseInt(fw[0].replace(/\./g, ''), 10) > 339 || (parseInt(fw[0].replace(/\./g, ''), 10) === 339 && parseInt(fw[1], 10) >= 3194)) {
+            if (parseInt(fw[0].replace(/\./g, ''), 10) > 339 || (parseInt(fw[0].replace(/\./g, ''), 10) === 339 && parseInt(fw[1], 10) >= 1856)) {
                 adapter.log.info('New generation or new fw(' + fw + ') detected, create new states goto and zoneclean');
                 this.goto = true;
                 this.zoneClean = true;
